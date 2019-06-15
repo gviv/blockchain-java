@@ -1,0 +1,250 @@
+/* -------------------------------- *
+ * Feuille de style principale      *
+ * Auteur : Guillaume Vivies        *
+ * -------------------------------- */
+
+@font-face {
+	src: url("../resources/fonts/VarelaRound-Regular.ttf");
+}
+
+@font-face {
+	src: url("../resources/fonts/AnonymousPro-Regular.ttf");
+}
+
+@font-face {
+	src: url("../resources/fonts/Muli-Light.ttf");
+}
+
+/* -- Global style -- */
+.root {
+	-fx-font-size: 1.1em;
+	-fx-font-family: 'Varela Round';
+	background-color: '#fcfdff';
+    -fx-background: background-color;
+}
+
+/* -- Header title -- */
+.header {
+	-fx-font-family: 'Muli Light';
+	-fx-text-fill: '#444444';
+	-fx-font-size: 2em;
+}
+
+/* -- ScrollPane -- */
+.scroll-pane-blockchain-overview,
+.scroll-pane-blockchain-overview:focused {
+	-fx-border-width: 2px 0 0 0;
+	-fx-background-color: transparent;
+	-fx-border-color: '#e2e2e2';
+}
+.scroll-pane-blockchain-overview .flow-pane,
+.scroll-pane-blockchain-overview .flow-pane:focused {
+	-fx-border-width: 0;
+	-fx-background-color: #f9f8fd;
+}
+
+.scroll-pane-block-overview,
+.scroll-pane-block-overview:focused {
+	-fx-border-width: 2px 0 0 0;
+	-fx-background-color: transparent;
+	-fx-border-color: '#e2e2e2';
+}
+
+/* -- VisualBlock -- */
+.block {
+	-fx-background-radius: 17px;
+	-fx-font-size: 1.6em;
+	-fx-border-radius: 17px;
+	-fx-border-width: 3px;
+}
+
+.block--valid {
+	-fx-background-color: '#99ffad';
+	-fx-border-color: '#32ff6c';
+	-fx-text-fill: '#13b50e';
+}
+
+.block--invalid {
+	-fx-background-color: '#ff9999';
+	-fx-border-color: '#ff3333';
+	-fx-text-fill: '#ca0000';
+}
+
+.block--unchecked {
+	-fx-background-color: '#dedede';
+	-fx-border-color: '#bfbfbf';
+	-fx-text-fill: '#808080';
+}
+
+/* -- NumberPicker -- */
+.number-picker__text-field {
+	-fx-alignment: center;
+	-fx-background-color: transparent;
+	-fx-font-size: 2em;
+}
+
+/* -- Button base -- */
+.button {
+	-fx-background-radius: 10px;
+	-fx-text-fill: rgb(40, 40, 40);
+    -fx-border-radius: 0px;
+    -fx-font-size: 1.1em;
+}
+
+/* -- IconButton -- */
+.icon-button {
+	-fx-alignment: center;
+	-fx-focus-traversable: false;
+	-fx-background-radius: 0;
+	-fx-text-fill: rgb(0, 0, 0);
+    -fx-border-radius: 0px;
+    -fx-background-color: transparent;
+}
+
+/* -- InfoBar -- */
+.info-bar {
+	info-bar-color-default: rgba(200, 200, 200, 0.85);
+	info-bar-color-success: rgba(107, 255, 121, 0.85);
+	info-bar-color-error: rgba(255, 107, 107, 0.85);
+}
+
+.info-bar--default {
+	-fx-background-color: info-bar-color-default;
+}
+
+.info-bar--success {
+	-fx-background-color: info-bar-color-success;
+}
+
+.info-bar--error {
+	-fx-background-color: info-bar-color-error;
+}
+
+.info-bar__text {
+	-fx-font-size: 1.3em;
+}
+
+.info-bar__text--default {
+	-fx-text-fill: derive(info-bar-color-default, -50%);
+}
+
+.info-bar__text--success {
+	-fx-text-fill: derive(info-bar-color-success, -50%);
+}
+
+.info-bar__text--error {
+	-fx-text-fill: derive(info-bar-color-error, -50%);
+}
+
+/* -- SearchBar -- */
+.search-bar {
+	-fx-background-color: transparent;
+	-fx-border-width: 1px;
+	-fx-border-radius: 5px;
+	-fx-border-color: '#dddddd';
+}
+
+.search-bar:focused {
+	-fx-border-color: '#68a0ff';
+}
+
+/* -- Blockchain state text -- */
+.info-text--unchecked {
+	-fx-text-fill: '#666666';
+}
+
+.info-text--valid {
+	-fx-text-fill: '#06ca00';
+}
+
+.info-text--invalid {
+	-fx-text-fill: '#d80f0f';
+}
+
+/* -- BlockOverview -- */
+.block-index {
+	-fx-font-family: 'Muli Light';
+	-fx-text-fill: '#444444';
+	-fx-font-size: 2.5em;
+}
+
+.block-details {
+	-fx-font-size: 1.07em;
+}
+
+.block-overview__label {
+	-fx-text-fill: '#9e9e9e';
+}
+
+/* -- ListView & ListCell -- */
+.list-view,
+.list-view:focused {
+	-fx-border-width: 1px 0 0 0;
+	-fx-border-color: '#e2e2e2';
+	-fx-background-color: transparent;
+	-fx-background-insets: 0;
+}
+
+.list-view .label,
+.list-view .selectable-label {
+	-fx-font-size: 0.88em;
+}
+
+.transaction-index .label {
+	-fx-font-family: 'Muli Light';
+	-fx-text-fill: '#444444';
+	-fx-font-size: 1.1em;
+	-fx-padding: -2px 0 5px 0;
+}
+
+.list-view .list-cell:odd,
+.list-view .list-cell:even {
+	-fx-background-color: '#fcfcff';
+}
+
+.list-cell {
+	-fx-border-width: 0 0 1px 2px;
+	-fx-border-color: '#e2e2e2';
+}
+
+.list-cell:empty {
+    -fx-opacity: 0;
+    -fx-border-width: 0;
+}
+
+.list-cell:filled:selected .label {
+    -fx-text-fill: '#9e9e9e';
+}
+
+.list-cell:filled:selected .transaction-index {
+	-fx-text-fill: '#444444';
+}
+
+/* -- FlatButton -- */
+.flat-button,
+.flat-button:focused {
+	-fx-alignment: center;
+	-fx-padding: 0 10px;
+}
+
+/* -- SelectableLabel -- */
+.selectable-label,
+.selectable-label:focused {
+	-fx-background-color: '#f3f3f3';
+	-fx-font-family: 'Anonymous Pro';
+	-fx-border-width: 0;
+	-fx-background-radius: 5px;
+}
+
+/* -- Floating box -- */
+.floating-box {
+	-fx-background-color: derive(background-color, +0.5%);
+	-fx-border-width: 0;
+	-fx-background-radius: 5px;
+	-fx-effect: dropshadow(gaussian, #aaaaaaaa, 5, 0, 0, 1);
+}
+
+.floating-box--text {
+	-fx-font-family: 'Muli Light';
+	-fx-font-size: 1.2em;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Vue de l'écran de chargement.
+ * Auteur : Guillaume Vivies
+-->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import ui.components.LoadingSpinner?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.LoadingScreenController">
+   <children>
+      <VBox alignment="CENTER" spacing="20.0" StackPane.alignment="CENTER">
+         <children>
+         <LoadingSpinner fx:id="loadingSpinner" />
+            <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="25.0" />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>

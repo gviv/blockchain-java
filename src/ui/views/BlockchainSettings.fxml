@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Vue des paramètres de la blockchain.
+ * Auteur : Guillaume Vivies
+-->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+<?import ui.components.FlatButton?>
+<?import ui.components.NumberPicker?>
+
+<StackPane fx:id="root" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.BlockchainSettingsController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" StackPane.alignment="CENTER">
+         <children>
+            <Label prefWidth="500.0" text="Paramètres Blockchain" styleClass="header" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <VBox alignment="CENTER" prefWidth="130.0" spacing="5.0">
+                     <children>
+                  	  <NumberPicker fx:id="pickerNbBlocs" />
+                        <TextFlow textAlignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" text="NB BLOCS" textAlignment="CENTER" textOverrun="CLIP" />
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefWidth="130.0" spacing="5.0">
+                     <children>
+                        <NumberPicker fx:id="pickerDifficulty" />
+                        <TextFlow textAlignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" text="DIFFICULTÉ" textAlignment="CENTER" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefWidth="130.0" spacing="5.0">
+                     <children>
+                        <NumberPicker fx:id="pickerNbTransactions" />
+                        <Label alignment="CENTER" text="NB TRANSACTIONS" textAlignment="CENTER" textOverrun="CLIP" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <FlatButton mnemonicParsing="false" onMouseClicked="#generateBlockchain" text="Générer" />
+         </children>
+         <StackPane.margin>
+            <Insets bottom="30.0" />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>

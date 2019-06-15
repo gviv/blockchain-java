@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Vue de l'écran d'accueil.
+ * Auteur : Guillaume Vivies
+-->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import ui.components.FlatButton?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.TitleScreenController">
+   <children>
+      <VBox fx:id="blockchainLoadedView" alignment="CENTER" spacing="20.0">
+         <children>
+            <HBox alignment="CENTER" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <FlatButton minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#goToBlockchainSettings" text="Générer Blockchain" />
+                  <FlatButton minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#importBlockchain" text="Importer Blockchain" />
+               </children>
+            </HBox>
+            <VBox styleClass="floating-box">
+               <children>
+                  <Label styleClass="floating-box--text" text="Blockchain actuelle">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <FlatButton minWidth="60.0" onAction="#goToBlockchainOverview" text="Consulter" />
+                        <FlatButton minWidth="60.0" onAction="#exportBlockchain" text="Exporter" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </VBox>
+            <FlatButton minHeight="30.0" mnemonicParsing="false" onAction="#quit" text="Quitter">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </FlatButton>
+         </children>
+      </VBox>
+      <VBox fx:id="blockchainNotLoadedView" alignment="CENTER" spacing="10.0" visible="false">
+         <children>
+            <FlatButton minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#goToBlockchainSettings" text="Générer Blockchain">
+                  </FlatButton>
+            <FlatButton minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#importBlockchain" text="Importer Blockchain" />
+            <FlatButton minHeight="30.0" mnemonicParsing="false" onAction="#quit" text="Quitter">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </FlatButton>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

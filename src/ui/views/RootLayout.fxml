@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Vue du layout principal.
+ * Auteur : Guillaume Vivies
+-->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import ui.components.FlatButton?>
+<?import ui.components.InfoBar?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.RootLayoutController">
+   <BorderPane fx:id="mainContent" prefHeight="200.0" prefWidth="200.0" />
+   <FlatButton fx:id="backButton" mnemonicParsing="false" onAction="#onClick" text="Retour" StackPane.alignment="TOP_LEFT">
+      <StackPane.margin>
+         <Insets left="5.0" top="10.0" />
+      </StackPane.margin>
+   </FlatButton>
+   <InfoBar fx:id="infoBar" StackPane.alignment="BOTTOM_CENTER" />
+</StackPane>
